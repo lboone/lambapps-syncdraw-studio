@@ -48,11 +48,11 @@ const Navbar = async (props: Props) => {
       <aside className="flex item-center gap-4">
 
       { (!user === false) ?
-        <><SiteButton buttonText="Dashboard" href="/dashboard"/>  
-        <SiteButton buttonText="Sign Out" href="/sign-out"/></>
+        <div className="hidden md:flex md:flex-row md:gap-2" ><SiteButton buttonText="Dashboard" href="/dashboard"/>  
+        <SiteButton buttonText="Sign Out" href="/sign-out"/></div>
           : 
-        <><SiteButton buttonText="Login" href="/sign-in" /> 
-        <SiteButton buttonText="Register" href="/sign-up"/></>
+          <div className="hidden md:flex md:flex-row md:gap-2" ><SiteButton buttonText="Login" href="/sign-in" /> 
+        <SiteButton buttonText="Register" href="/sign-up"/></div>
       } 
       
         {/* WIP:wire up user */}
