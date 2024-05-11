@@ -8,9 +8,8 @@ const Hero = () => {
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex flex-col items-center gap-4 my-14">
             <SiteButton
-              buttonText="See What's New | AI Diagram"
               href="/whats-new"
-            />
+            ><span className="pr-2">See What's New"</span> | <span className="pl-2 text-green-200">AI Diagram</span></SiteButton>
           </div>
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
             Document , Draw and Share
@@ -23,7 +22,7 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <SiteButton buttonText="Learn More" href="/learnmore" />
+            <SiteButton href="/learnmore">Learn More</SiteButton>
           </div>
         </div>
       </div>

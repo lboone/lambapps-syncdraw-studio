@@ -8,7 +8,7 @@ import SiteButton from './SiteButton'
 type Props = {};
 
 const Navbar = async (props: Props) => {
-  const user = true;
+  const user = false;
   const onClick = () => {console.log("clicked")}
   return (
     <header className="fixed right-0 left-0 top-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-between">
@@ -47,12 +47,14 @@ const Navbar = async (props: Props) => {
       </nav>
       <aside className="flex item-center gap-4">
 
-      { (!user === false) ?
-        <div className="hidden md:flex md:flex-row md:gap-2" ><SiteButton buttonText="Dashboard" href="/dashboard"/>  
-        <SiteButton buttonText="Sign Out" href="/sign-out"/></div>
+      { (user) ?
+        <div className="hidden md:flex md:flex-row md:gap-2" ><SiteButton  href="/dashboard">Dashboard</SiteButton>  
+        <SiteButton href="/sign-out">Sign Out</SiteButton></div>
           : 
-          <div className="hidden md:flex md:flex-row md:gap-2" ><SiteButton buttonText="Login" href="/sign-in" /> 
-        <SiteButton buttonText="Register" href="/sign-up"/></div>
+          <div className="hidden md:flex md:flex-row md:gap-2" >
+            <SiteButton href="/sign-in">Login</SiteButton> 
+            <SiteButton href="/sign-up">Register</SiteButton>
+          </div>
       } 
       
         {/* WIP:wire up user */}
