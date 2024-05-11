@@ -200,3 +200,18 @@
       @apply bg-background text-foreground;
     }
   } */
+
+
+  .auth-container {
+    background-image: url('/authbg.jpeg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .cl-internal-180wb59 {
+    display: none;
+  }
